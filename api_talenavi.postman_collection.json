@@ -1,0 +1,243 @@
+{
+	"info": {
+		"_postman_id": "6959569b-c0c7-41ec-8e38-6a17e522bcca",
+		"name": "api_talenavi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41249228"
+	},
+	"item": [
+		{
+			"name": "get transaction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/transactions?per_page=20&start_date=2025-01-25&end_date=2025-01-26",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"transactions"
+					],
+					"query": [
+						{
+							"key": "per_page",
+							"value": "20"
+						},
+						{
+							"key": "start_date",
+							"value": "2025-01-25"
+						},
+						{
+							"key": "end_date",
+							"value": "2025-01-26"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post transaction",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "laravel_session=eyJpdiI6Ik1XVDJXVUtIblVHdjFPTVNld1V0aFE9PSIsInZhbHVlIjoianYzVlZCNzdad0xZbnJJZi95aHAxMFNtYjlpTkw3aVdyYmNNRkdEUDhSOU5sTUUvR3JzeVNySlJRNlpqQ2hwS2srd2V6ZnNkRWp1QTNLSmtHZkNnS2d3bjMxSUg1b0lYN2VvaFNhamcxQkZ3blovMlRDUjJZWlpCVnVNOEVmdnQiLCJtYWMiOiI1MDY4NGE4NmY2ZjI2Nzg5MmU1MTMwOTQ0MjUzNWI3YzQ2MmM1MmIwMDEwZTQ5Y2MxMTRhZTY4NThlYWRlMTc2IiwidGFnIjoiIn0%3D; XSRF-TOKEN=eyJpdiI6Ik1wUC9aOWhpaUxJUzgvZ2huSVhta0E9PSIsInZhbHVlIjoiSmlNREJXaEkzYVVDWk8zMmFBRnJCQ0ZmWHJyaEptc0VFYUFsYzQ0aVZWakpHK1hTMHFkaExodXVYU0hxMk9pcHh6VFpXUThRblYrc3lLb25KeTFSc2NXaGlJcU0wRDZGNXlIUlNZUDk5dmxubUY0OGxVODk2NlBsMTAySGtUV1kiLCJtYWMiOiJlZDMzMGIxMDRkYzJiMmY3NzdjOWI1OTNhM2Y4NzhmZjQ2YmU0ZmY3OGUxNzk2MDhmOWEyMzY2NzFhMTg3MDIxIiwidGFnIjoiIn0%3D",
+						"name": "cookie",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"name": "cache-control",
+						"type": "text"
+					},
+					{
+						"key": "Postman-Token",
+						"value": "<calculated when request is sent>",
+						"name": "postman-token",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"name": "content-type",
+						"type": "text"
+					},
+					{
+						"key": "Content-Length",
+						"value": "<calculated when request is sent>",
+						"name": "content-length",
+						"type": "text"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"name": "host",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": "PostmanRuntime/7.39.1",
+						"name": "user-agent",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"name": "accept",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br",
+						"name": "accept-encoding",
+						"type": "text"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive",
+						"name": "connection",
+						"type": "text"
+					},
+					{
+						"key": "X-Signature",
+						"value": "bf098eb6de70372531888a50f4cd5d29a791ad324e70c6bb1090d7e75307d0cc",
+						"type": "text"
+					},
+					{
+						"key": "X-Timestamp",
+						"value": "2024-11-16 15:07:16",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": 1,\r\n    \"amount\": 394394,\r\n    \"description\": \"test adnan\",\r\n    \"transacted_at\" : \"2024-11-16 15:07:16\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/transactions",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post transaction seeder",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "laravel_session=eyJpdiI6IlNqUDRJSUN0VHlVZytKdTNNVi9kY3c9PSIsInZhbHVlIjoia09Ga0xRWjdDVGJ6d2dEYzZ5YWh2bnVxWFY1WWhBZWZhWnIxL3cyM2p5VEdUVHVVTFNPeTJ3SGx6ai80NjVIakhDZHhBcUlsT0xCM2psU3lYSE05eTdYRFVnYjdjakNlU2ZEOXV0YVRCSFk2MXFaaTJHNHBtR29sUjNVRkhqT1UiLCJtYWMiOiI3NjIwODU0ZDQzYzA3NDdjZjhkZWYyZWNmZjkzYmE0NjZiM2FjMGM5ZTFiNTAzMmRjMmJmMTgwZTA1NmFjNWFlIiwidGFnIjoiIn0%3D; XSRF-TOKEN=eyJpdiI6Ik1wUC9aOWhpaUxJUzgvZ2huSVhta0E9PSIsInZhbHVlIjoiSmlNREJXaEkzYVVDWk8zMmFBRnJCQ0ZmWHJyaEptc0VFYUFsYzQ0aVZWakpHK1hTMHFkaExodXVYU0hxMk9pcHh6VFpXUThRblYrc3lLb25KeTFSc2NXaGlJcU0wRDZGNXlIUlNZUDk5dmxubUY0OGxVODk2NlBsMTAySGtUV1kiLCJtYWMiOiJlZDMzMGIxMDRkYzJiMmY3NzdjOWI1OTNhM2Y4NzhmZjQ2YmU0ZmY3OGUxNzk2MDhmOWEyMzY2NzFhMTg3MDIxIiwidGFnIjoiIn0%3D",
+						"name": "cookie",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"name": "cache-control",
+						"type": "text"
+					},
+					{
+						"key": "Postman-Token",
+						"value": "<calculated when request is sent>",
+						"name": "postman-token",
+						"type": "text"
+					},
+					{
+						"key": "Content-Length",
+						"value": "0",
+						"name": "content-length",
+						"type": "text"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"name": "host",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": "PostmanRuntime/7.39.1",
+						"name": "user-agent",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"name": "accept",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br",
+						"name": "accept-encoding",
+						"type": "text"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive",
+						"name": "connection",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/transactions/seed",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"transactions",
+						"seed"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
